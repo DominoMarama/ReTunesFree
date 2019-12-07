@@ -1,0 +1,25 @@
+{
+  "slug": "ReTunesFree",
+  "name": "ReTunes Free",
+  "version": "1.0.0",
+  "license": "GPL-3.0-or-later",
+  "brand": "ReTunes",
+  "author": "Domino Marama",
+  "authorEmail": "domino@dominodesigns.info",
+  "authorUrl": "https://dominodesigns.info",
+  "pluginUrl": "https://retunes.com/vcv/free",
+  "manualUrl": "https://retunes.com/vcv/free/manual",
+  "sourceUrl": "",
+  "donateUrl": "https://www.paypal.me/DominoDesigns",
+  "changelogUrl": "",
+  "modules": [
+    {
+      "slug": "ReTunes-ForFour",
+      "name": "For Four",
+      "description": "Clock divider and counter for four beats per bar",
+      "tags": [
+        "Clock"
+      ]
+    }
+ ]
+}
