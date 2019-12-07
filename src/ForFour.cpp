@@ -34,8 +34,8 @@ struct ReTunes_ForFour : Module {
 
     ReTunes_ForFour() {
         config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
-        configParam(PATTERNA_PARAM, 0.f, 256.f, 8.f, "Pattern A");
-        configParam(PATTERNB_PARAM, 0.f, 256.f, 8.f, "Pattern B");
+        configParam(PATTERNA_PARAM, 0.f, 255.f, 12.f, "Pattern A");
+        configParam(PATTERNB_PARAM, 0.f, 255.f, 24.f, "Pattern B");
         configParam(COUNT1_PARAM, 1.f, 256.f, 8.f, "Count 1");
         configParam(COUNT2_PARAM, 1.f, 256.f, 16.f, "Count 2");
         configParam(COUNT3_PARAM, 1.f, 256.f, 32.f, "Count 3");
@@ -44,7 +44,7 @@ struct ReTunes_ForFour : Module {
 
     void process(const ProcessArgs& args) override;
 
-    int counter, beat, countdown1, countdown2, countdown3;
+    int counter, beat, patternA, patternB, countdown1, countdown2, countdown3;
 
     bool resetNext = true;
 
@@ -84,8 +84,12 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
         outputs[i].value = (beat == i ? inputs[CLOCK_INPUT].value : 0.0f);
     }
 
-    outputs[FILLA_OUTPUT].value = (counter & 4 ? 10.0f : 0.0f);
-    outputs[FILLB_OUTPUT].value = ((counter & 12) == 12 ? 10.0f : 0.0f);
+    patternA = (int)params[PATTERNA_PARAM].value;
+    patternB = (int)params[PATTERNB_PARAM].value;
+
+    outputs[FILLA_OUTPUT].value = ((counter & patternA) == patternA ? 10.0f : 0.0f);
+    outputs[FILLB_OUTPUT].value = ((counter & patternB) == patternB ? 10.0f : 0.0f);
+
     outputs[COUNTER1_OUTPUT].value = (countdown1 ? 0.0f : inputs[CLOCK_INPUT].value);
     outputs[COUNTER2_OUTPUT].value = (countdown2 ? 0.0f : inputs[CLOCK_INPUT].value);
     outputs[COUNTER3_OUTPUT].value = (countdown3 ? 0.0f : inputs[CLOCK_INPUT].value);
