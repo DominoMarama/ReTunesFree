@@ -44,7 +44,7 @@ struct ReTunes_ForFour : Module {
 
     void process(const ProcessArgs& args) override;
 
-    int counter, beat, patternA, patternB, countdown1, countdown2, countdown3;
+    int counter, beat, patternA, patternB, countdownX, countdownY, countdownZ, cd;
 
     bool resetNext = true;
 
@@ -60,23 +60,41 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
     if (clockTrigger.process(inputs[CLOCK_INPUT].value)) {
         counter++;
         if (counter == 256) counter = 0;
-        countdown1--;
-        if (countdown1 < 0){
-            countdown1 = (int)params[COUNT_X_PARAM].value - 1;
+
+        countdownX--;
+        cd = (int)params[COUNT_X_PARAM].value;
+        if (countdownX > cd)
+        {
+            countdownX = countdownX % cd;
         };
-        countdown2--;
-        if (countdown2 < 0){
-            countdown2 = (int)params[COUNT_Y_PARAM].value - 1;
+        if (countdownX < 0){
+            countdownX = cd - 1;
         };
-        countdown3--;
-        if (countdown3 < 0){
-            countdown3 = (int)params[COUNT_Z_PARAM].value - 1;
+
+        countdownY--;
+        cd = (int)params[COUNT_Y_PARAM].value;
+        if (countdownY > cd)
+        {
+            countdownY = countdownY % cd;
+        };
+        if (countdownY < 0){
+            countdownY = cd - 1;
+        };
+
+        countdownZ--;
+        cd = (int)params[COUNT_Z_PARAM].value;
+        if (countdownZ > cd)
+        {
+            countdownZ = countdownZ % cd;
+        };
+        if (countdownZ < 0){
+            countdownZ = cd - 1;
         };
     } else if (resetNext) {
         counter = -1;
-        countdown1 = 1;
-        countdown2 = 1;
-        countdown3 = 1;
+        countdownX = 1;
+        countdownY = 1;
+        countdownZ = 1;
         resetNext = false;
         return;
     };
@@ -92,9 +110,9 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
     outputs[PATTERN_A_OUTPUT].value = ((counter & patternA) == patternA ? 10.0f : 0.0f);
     outputs[PATTERN_B_OUTPUT].value = ((counter & patternB) == patternB ? 10.0f : 0.0f);
 
-    outputs[COUNT_X_OUTPUT].value = (countdown1 ? 0.0f : inputs[CLOCK_INPUT].value);
-    outputs[COUNT_Y_OUTPUT].value = (countdown2 ? 0.0f : inputs[CLOCK_INPUT].value);
-    outputs[COUNT_Z_OUTPUT].value = (countdown3 ? 0.0f : inputs[CLOCK_INPUT].value);
+    outputs[COUNT_X_OUTPUT].value = (countdownX ? 0.0f : inputs[CLOCK_INPUT].value);
+    outputs[COUNT_Y_OUTPUT].value = (countdownY ? 0.0f : inputs[CLOCK_INPUT].value);
+    outputs[COUNT_Z_OUTPUT].value = (countdownZ ? 0.0f : inputs[CLOCK_INPUT].value);
 };
 
 
