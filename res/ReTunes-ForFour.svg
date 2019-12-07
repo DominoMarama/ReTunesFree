@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
-   sodipodi:docname="ForFour.svg">
+   sodipodi:docname="ReTunes-ForFour.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.1834562"
-     inkscape:cx="-12.872163"
-     inkscape:cy="304.80376"
+     inkscape:zoom="1.5439367"
+     inkscape:cx="67.219033"
+     inkscape:cy="239.25614"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -53,7 +53,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -161,33 +161,6 @@
          id="path3231"
          inkscape:connector-curvature="0" />
     </g>
-    <g
-       aria-label="Even"
-       transform="matrix(0.51510946,0,0,0.51510946,-15.237044,108.03113)"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garuda;-inkscape-font-specification:Garuda;letter-spacing:0px;word-spacing:0px;fill:#1b1818;fill-opacity:1;stroke:none"
-       id="evenLabelID"
-       inkscape:label="#EvenBar">
-      <path
-         d="m 39.068177,247.8949 v -7.63734 h 5.525334 v 0.896 H 40.08151 v 2.34667 h 4.213334 v 0.896 H 40.08151 v 2.60267 h 4.672001 v 0.896 z"
-         id="path3306"
-         inkscape:connector-curvature="0"
-         style="fill:#1b1818;fill-opacity:1" />
-      <path
-         d="m 47.558828,247.8949 -2.112,-5.52534 h 1.002666 l 1.536,4.26667 1.589334,-4.26667 h 0.96 l -2.112,5.52534 z"
-         id="path3308"
-         inkscape:connector-curvature="0"
-         style="fill:#1b1818;fill-opacity:1" />
-      <path
-         d="m 51.996146,245.35623 q 0.05333,0.864 0.48,1.38667 0.437334,0.512 1.205334,0.512 1.024,0 1.461333,-1.14134 l 0.96,0.11734 q -0.490667,1.792 -2.432,1.792 -1.248,0 -1.941333,-0.736 -0.693334,-0.74667 -0.693334,-2.12267 0,-1.33333 0.672,-2.12267 0.682667,-0.8 1.909334,-0.8 1.109333,0 1.76,0.672 0.650666,0.66134 0.736,1.824 v 0.61867 z m 0.05333,-0.768 h 3.093333 q -0.128,-1.57867 -1.504,-1.57867 -0.693333,0 -1.12,0.448 -0.416,0.43734 -0.469333,1.13067 z"
-         id="path3310"
-         inkscape:connector-curvature="0"
-         style="fill:#1b1818;fill-opacity:1" />
-      <path
-         d="m 57.276144,247.8949 v -5.52534 h 0.938666 v 0.768 q 0.426667,-0.896 1.674667,-0.896 1.877333,0 1.877333,2.00534 v 3.648 h -0.949333 v -3.37067 q 0,-1.51467 -1.141333,-1.51467 -1.450667,0 -1.450667,1.856 v 3.02934 z"
-         id="path3312"
-         inkscape:connector-curvature="0"
-         style="fill:#1b1818;fill-opacity:1" />
-    </g>
     <path
        transform="translate(0,168.49998)"
        inkscape:connector-curvature="0"
@@ -216,33 +189,6 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garuda;-inkscape-font-specification:Garuda;letter-spacing:0px;word-spacing:0px;fill:#1b1818;fill-opacity:1;stroke:none;stroke-width:0.50539082"
        d="m 15.576928,55.147559 v -0.975742 h -1.676549 v -0.38814 l 1.768194,-2.495957 h 0.38814 v 2.495957 h 0.522911 v 0.38814 h -0.522911 v 0.975742 z m 0,-1.363882 v -1.735849 l -1.202156,1.735849 z"
        inkscape:label="#Beat4" />
-    <g
-       aria-label="Fill"
-       style="font-style:normal;font-weight:normal;font-size:2.82222223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#1b1818;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       id="fillLabelID"
-       transform="matrix(1.9795013,0,0,1.9795013,1.2013566,100.47809)"
-       inkscape:label="#Fill">
-      <path
-         d="m 4.5965944,74.45533 v -2.020711 h 1.3631334 v 0.237066 H 4.8647055 v 0.623712 h 0.9426223 v 0.237066 H 4.8647055 v 0.922867 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Garuda;-inkscape-font-specification:Garuda;fill:#1b1818;fill-opacity:1;stroke-width:0.26458332"
-         id="path3331"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 6.2701685,72.719663 v -0.285044 h 0.2511778 v 0.285044 z m 0,1.735667 v -1.461911 h 0.2511778 v 1.461911 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Garuda;-inkscape-font-specification:Garuda;fill:#1b1818;fill-opacity:1;stroke-width:0.26458332"
-         id="path3333"
-         inkscape:connector-curvature="0" />
-      <path
-         d="M 6.8910524,74.45533 V 72.434619 H 7.1422301 V 74.45533 Z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Garuda;-inkscape-font-specification:Garuda;fill:#1b1818;fill-opacity:1;stroke-width:0.26458332"
-         id="path3335"
-         inkscape:connector-curvature="0" />
-      <path
-         d="M 7.5175806,74.45533 V 72.434619 H 7.7687584 V 74.45533 Z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Garuda;-inkscape-font-specification:Garuda;fill:#1b1818;fill-opacity:1;stroke-width:0.26458332"
-         id="path3337"
-         inkscape:connector-curvature="0" />
-    </g>
     <g
        transform="translate(0,173.26249)"
        id="clockLabelID"
@@ -285,13 +231,38 @@
          id="path3367"
          inkscape:connector-curvature="0" />
     </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path885"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garuda;-inkscape-font-specification:Garuda;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.39280686"
+       d="m 15.671243,232.29006 h 0.385473 l 1.210893,3 h -0.427373 l -0.343576,-0.89664 h -1.265362 l -0.343574,0.89664 h -0.427375 z m -0.305867,1.7514 h 0.997206 l -0.326815,-0.86313 q -0.134076,-0.36452 -0.171787,-0.57402 -0.03771,0.2095 -0.171788,0.57402 z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path887"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garuda;-inkscape-font-specification:Garuda;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.39280728"
+       d="m 15.859789,244.36251 q 0.498603,0 0.745809,0.21788 0.251398,0.21369 0.251398,0.54888 0,0.43157 -0.427374,0.63269 0.561452,0.17178 0.561452,0.73323 0,0.86732 -1.114524,0.86732 h -1.139666 v -3 z m -0.07961,1.26118 q 0.372903,0 0.523741,-0.11313 0.15503,-0.11313 0.15503,-0.33101 0,-0.28491 -0.175979,-0.3729 -0.171787,-0.0922 -0.553072,-0.0922 h -0.594973 v 0.90922 z m 0.812849,0.8715 q 0,-0.25558 -0.167598,-0.38547 -0.167598,-0.13408 -0.599163,-0.13408 h -0.691341 v 1.03492 h 0.741621 q 0.385474,0 0.548883,-0.13408 0.167598,-0.13408 0.167598,-0.38129 z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path874"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garuda;-inkscape-font-specification:Garuda;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.39280745"
+       d="m 14.489677,259.43497 1.160613,-1.56704 -1.026536,-1.43296 h 0.473462 l 0.783522,1.11871 q 0.582403,-0.76676 0.842178,-1.11871 h 0.431565 l -1.055865,1.41201 1.139665,1.58799 h -0.490224 l -0.88408,-1.2486 -0.900838,1.2486 z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path876"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garuda;-inkscape-font-specification:Garuda;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.39280745"
+       d="m 15.646101,271.50742 v -1.26955 l -1.156425,-1.73045 h 0.481845 l 0.900837,1.37011 0.905028,-1.37011 h 0.460895 l -1.194133,1.73045 v 1.26955 z" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path878"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Garuda;-inkscape-font-specification:Garuda;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.39280707"
+       d="m 14.678226,283.57987 v -0.37291 l 1.822625,-2.27514 h -1.650839 v -0.35195 h 2.153631 v 0.35195 l -1.868715,2.29609 h 1.914804 v 0.35196 z" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer2"
      inkscape:label="components"
      transform="translate(0,-0.1770806)"
-     style="display:inline">
+     style="display:none">
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="countControl1ID"
@@ -308,11 +279,11 @@
        inkscape:label="Clock" />
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       id="evenBarID"
+       id="fillAD"
        cx="22.936333"
        cy="65.290085"
        r="4"
-       inkscape:label="EvenBar" />
+       inkscape:label="FillA" />
     <circle
        inkscape:label="Beat1"
        r="4"
@@ -363,11 +334,11 @@
        r="4"
        inkscape:label="Count3" />
     <circle
-       inkscape:label="FillBars"
+       inkscape:label="FillBs"
        r="4"
        cy="77.362534"
        cx="22.936333"
-       id="fillBarsID"
+       id="fillBID"
        style="display:inline;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
     <circle
        style="display:inline;opacity:1;vector-effect:none;fill:#0000ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
@@ -390,5 +361,19 @@
        cy="113.57989"
        r="4"
        inkscape:label="Counter3" />
+    <circle
+       inkscape:label="PatternA"
+       r="4"
+       cy="65.290085"
+       cx="9.1311655"
+       id="PatternAID"
+       style="display:inline;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal" />
+    <circle
+       style="display:inline;opacity:1;vector-effect:none;fill:#ff0000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="patternBID"
+       cx="9.1311655"
+       cy="77.362534"
+       r="4"
+       inkscape:label="PatternB" />
   </g>
 </svg>

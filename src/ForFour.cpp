@@ -6,6 +6,8 @@ struct ReTunes_ForFour : Module {
         COUNT1_PARAM,
         COUNT2_PARAM,
         COUNT3_PARAM,
+        PATTERNA_PARAM,
+        PATTERNB_PARAM,
         NUM_PARAMS
     };
     enum InputIds {
@@ -19,8 +21,8 @@ struct ReTunes_ForFour : Module {
         BEAT2_OUTPUT,
         BEAT3_OUTPUT,
         BEAT4_OUTPUT,
-        EVENBAR_OUTPUT,
-        FILLBARS_OUTPUT,
+        FILLA_OUTPUT,
+        FILLB_OUTPUT,
         COUNTER1_OUTPUT,
         COUNTER2_OUTPUT,
         COUNTER3_OUTPUT,
@@ -32,6 +34,8 @@ struct ReTunes_ForFour : Module {
 
     ReTunes_ForFour() {
         config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
+        configParam(PATTERNA_PARAM, 0.f, 256.f, 8.f, "Pattern A");
+        configParam(PATTERNB_PARAM, 0.f, 256.f, 8.f, "Pattern B");
         configParam(COUNT1_PARAM, 1.f, 256.f, 8.f, "Count 1");
         configParam(COUNT2_PARAM, 1.f, 256.f, 16.f, "Count 2");
         configParam(COUNT3_PARAM, 1.f, 256.f, 32.f, "Count 3");
@@ -80,8 +84,8 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
         outputs[i].value = (beat == i ? inputs[CLOCK_INPUT].value : 0.0f);
     }
 
-    outputs[EVENBAR_OUTPUT].value = (counter & 4 ? 10.0f : 0.0f);
-    outputs[FILLBARS_OUTPUT].value = ((counter & 12) == 12 ? 10.0f : 0.0f);
+    outputs[FILLA_OUTPUT].value = (counter & 4 ? 10.0f : 0.0f);
+    outputs[FILLB_OUTPUT].value = ((counter & 12) == 12 ? 10.0f : 0.0f);
     outputs[COUNTER1_OUTPUT].value = (countdown1 ? 0.0f : inputs[CLOCK_INPUT].value);
     outputs[COUNTER2_OUTPUT].value = (countdown2 ? 0.0f : inputs[CLOCK_INPUT].value);
     outputs[COUNTER3_OUTPUT].value = (countdown3 ? 0.0f : inputs[CLOCK_INPUT].value);
@@ -99,17 +103,28 @@ struct ReTunes_ForFourWidget : ModuleWidget {
         addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
         {
-            auto w = createParamCentered<RoundBlackKnob>(mm2px(Vec(9.131, 89.435)), module, ReTunes_ForFour::COUNT1_PARAM);
+            auto w = createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(8, 65.291)), module, ReTunes_ForFour::PATTERNA_PARAM);
             dynamic_cast<Knob*>(w)->snap = true;
             addParam(w);
         };
         {
-            auto w = createParamCentered<RoundBlackKnob>(mm2px(Vec(9.131, 101.507)), module, ReTunes_ForFour::COUNT2_PARAM);
+            auto w = createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(8, 77.363)), module, ReTunes_ForFour::PATTERNB_PARAM);
+            dynamic_cast<Knob*>(w)->snap = true;
+            addParam(w);
+        };
+
+        {
+            auto w = createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(8, 89.435)), module, ReTunes_ForFour::COUNT1_PARAM);
             dynamic_cast<Knob*>(w)->snap = true;
             addParam(w);
         };
         {
-            auto w = createParamCentered<RoundBlackKnob>(mm2px(Vec(9.131, 113.58)), module, ReTunes_ForFour::COUNT3_PARAM);
+            auto w = createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(8, 101.507)), module, ReTunes_ForFour::COUNT2_PARAM);
+            dynamic_cast<Knob*>(w)->snap = true;
+            addParam(w);
+        };
+        {
+            auto w = createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(8, 113.58)), module, ReTunes_ForFour::COUNT3_PARAM);
             dynamic_cast<Knob*>(w)->snap = true;
             addParam(w);
         };
@@ -121,8 +136,8 @@ struct ReTunes_ForFourWidget : ModuleWidget {
         addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 29.073)), module, ReTunes_ForFour::BEAT2_OUTPUT));
         addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 41.145)), module, ReTunes_ForFour::BEAT3_OUTPUT));
         addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 53.218)), module, ReTunes_ForFour::BEAT4_OUTPUT));
-        addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 65.29)), module, ReTunes_ForFour::EVENBAR_OUTPUT));
-        addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 77.363)), module, ReTunes_ForFour::FILLBARS_OUTPUT));
+        addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 65.29)), module, ReTunes_ForFour::FILLA_OUTPUT));
+        addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 77.363)), module, ReTunes_ForFour::FILLB_OUTPUT));
         addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 89.435)), module, ReTunes_ForFour::COUNTER1_OUTPUT));
         addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 101.507)), module, ReTunes_ForFour::COUNTER2_OUTPUT));
         addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 113.58)), module, ReTunes_ForFour::COUNTER3_OUTPUT));
