@@ -59,6 +59,7 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
 
     if (clockTrigger.process(inputs[CLOCK_INPUT].value)) {
         counter++;
+        if (counter == 256) counter = 0;
         countdown1--;
         if (countdown1 < 0){
             countdown1 = (int)params[COUNT1_PARAM].value - 1;
