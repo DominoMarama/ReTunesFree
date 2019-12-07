@@ -39,22 +39,13 @@ struct ReTunes_ForFour : Module {
         };
 
         void process(const ProcessArgs& args) override;
-        void onReset() override;
 
         int counter, beat, countdown1, countdown2, countdown3;
 
-        bool resetNext = false;
+        bool resetNext = true;
 
         dsp::SchmittTrigger clockTrigger, resetTrigger;
 };
-
-void ReTunes_ForFour::onReset() {
-    counter = -1;
-    countdown1 = 1;
-    countdown2 = 1;
-    countdown3 = 1;
-    resetNext = false;
-}
 
 void ReTunes_ForFour::process(const ProcessArgs &args) {
     if (resetTrigger.process(inputs[RESET_INPUT].value)) {
@@ -75,11 +66,12 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
         if (countdown3 < 0){
             countdown3 = (int)params[COUNT3_PARAM].value - 1;
         };
-    } else {
-        if (resetNext)
-        {
-            onReset();
-        }
+    } else if (resetNext) {
+        counter = -1;
+        countdown1 = 1;
+        countdown2 = 1;
+        countdown3 = 1;
+        resetNext = false;
     };
 
     beat = counter % 4;
