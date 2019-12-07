@@ -78,6 +78,7 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
         countdown2 = 1;
         countdown3 = 1;
         resetNext = false;
+        return;
     };
 
     beat = counter % 4;
