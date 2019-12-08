@@ -78,21 +78,21 @@ jobs:
 
   - task: PublishPipelineArtifact@0
     inputs:
-      artifactName: 'BACONPLUGS_ZIP_LINUX'
+      artifactName: 'RETUNESFREE_ZIP_LINUX'
       targetPath: 'products_lin/'
     displayName: Publish Linux Zip
     condition: variables.isLinux
 
   - task: PublishPipelineArtifact@0
     inputs:
-      artifactName: 'BACONPLUGS_ZIP_MACOS'  
+      artifactName: 'RETUNESFREE_ZIP_MACOS'
       targetPath: 'products_mac/'
     displayName: Publish macOS Zip
     condition: variables.isMac
 
   - task: PublishPipelineArtifact@0
     inputs:
-      artifactName: 'BACONPLUGS_ZIP_WIN'  
+      artifactName: 'RETUNESFREE_ZIP_WIN'
       targetPath: 'products_win/'
     displayName: Publish Windows Zip
     condition: variables.isWindows
@@ -106,17 +106,17 @@ jobs:
 
   - task: DownloadPipelineArtifact@0
     inputs:
-      artifactName: 'BACONPLUGS_ZIP_LINUX'
+      artifactName: 'RETUNESFREE_ZIP_LINUX'
       targetPath: $(Build.ArtifactStagingDirectory)
 
   - task: DownloadPipelineArtifact@0
     inputs:
-      artifactName: 'BACONPLUGS_ZIP_MACOS'
+      artifactName: 'RETUNESFREE_ZIP_MACOS'
       targetPath: $(Build.ArtifactStagingDirectory)
 
   - task: DownloadPipelineArtifact@0
     inputs:
-      artifactName: 'BACONPLUGS_ZIP_WIN'
+      artifactName: 'RETUNESFREE_ZIP_WIN'
       targetPath: $(Build.ArtifactStagingDirectory)
 
   - bash: |
@@ -133,8 +133,8 @@ jobs:
   - task: GitHubRelease@0
     displayName: "Update Github Release"
     inputs:
-      gitHubConnection: baconpaul
-      repositoryName: baconpaul/BaconPlugs
+      gitHubConnection: DominoMarama
+      repositoryName: DominoMarama/ReTunesFree
       action: edit
       tag: Nightly
       target: '$(Build.SourceVersion)'

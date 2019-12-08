@@ -1,15 +1,15 @@
 #!/bin/bash
 
 cat <<- EOH
-# Automatically generated BaconMusic release
+# Automatically generated ReTunesFree release
 
-This release is automatically generated every time I push BaconMusic
-to master. As such it is the latest version of the code and may be
+This release is automatically generated every time I update ReTunesFree.
+As such it is the latest version of the code and may be
 unstable, unusable, unsuitable for human consumption, and so on.
-The stable release is always available in the Rack Plugin Manager.
+I plan on stable releases being available in the Rack Plugin Manager.
 
 These assets were built against
-https://vcvrack.com/downloads/Rack-SDK-1.0.0.zip
+https://vcvrack.com/downloads/Rack-SDK-1.1.6.zip
 
 The build date and most recent commits are:
 
