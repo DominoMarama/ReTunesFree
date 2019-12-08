@@ -136,7 +136,7 @@ jobs:
       gitHubConnection: github.com_DominoMarama
       repositoryName: DominoMarama/ReTunesFree
       action: edit
-      tag: Nightly
+      tag: Development
       target: '$(Build.SourceVersion)'
       addChangeLog: false
       releaseNotesFile: $(Build.ArtifactStagingDirectory)/ReleaseNotes.md

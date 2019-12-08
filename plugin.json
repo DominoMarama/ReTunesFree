@@ -7,16 +7,16 @@
   "author": "Domino Marama",
   "authorEmail": "domino@dominodesigns.info",
   "authorUrl": "https://dominodesigns.info",
-  "pluginUrl": "https://retunes.com/vcv/free",
-  "manualUrl": "https://retunes.com/vcv/free/manual",
-  "sourceUrl": "",
+  "pluginUrl": "https://github.com/DominoMarama/ReTunesFree",
+  "manualUrl": "https://github.com/DominoMarama/ReTunesFree/wiki/ForFour",
+  "sourceUrl": "https://github.com/DominoMarama/ReTunesFree",
   "donateUrl": "https://www.paypal.me/DominoDesigns",
   "changelogUrl": "",
   "modules": [
     {
       "slug": "ReTunes-ForFour",
       "name": "For Four",
-      "description": "Clock divider and counter for four beats per bar",
+      "description": "Clock beat divider, counters and patterns for four beats per bar",
       "tags": [
         "Clock"
       ]
