@@ -52,7 +52,7 @@ jobs:
       export RACK_DIR=$AGENT_TEMPDIRECTORY/Rack-SDK
       export CC=gcc
 
-      make dist
+      make win-dist
 
       mkdir products_win/
       cp dist/*zip products_win/
@@ -141,5 +141,3 @@ jobs:
       addChangeLog: false
       releaseNotesFile: $(Build.ArtifactStagingDirectory)/ReleaseNotes.md
       assets: $(Build.ArtifactStagingDirectory)/*.zip
-
-
