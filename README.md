@@ -2,13 +2,11 @@
 
 ## Donate
 
-If you enjoy these modules you can support the development by making a donation.
+If you enjoy these modules you can support the developer by [making a donation](https://www.paypal.me/DominoDesigns).
 
-Here's the link: [DONATE](https://www.paypal.me/DominoDesigns)
+## User Manuals
 
-## Modules
-
-![](ForFour.jpg)
+Instructions for using the ReTunes plugins are [available here](https://github.com/DominoMarama/ReTunesFree/wiki).
 
 ## License
 
