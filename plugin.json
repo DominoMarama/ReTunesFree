@@ -7,8 +7,8 @@
   "author": "Domino Marama",
   "authorEmail": "domino@dominodesigns.info",
   "authorUrl": "https://dominodesigns.info",
-  "pluginUrl": "https://github.com/DominoMarama/ReTunesFree",
-  "manualUrl": "https://github.com/DominoMarama/ReTunesFree/wiki/ForFour",
+  "pluginUrl": "https://github.com/DominoMarama/ReTunesFree/wiki/Home",
+  "manualUrl": "https://github.com/DominoMarama/ReTunesFree/wiki/For-Four",
   "sourceUrl": "https://github.com/DominoMarama/ReTunesFree",
   "donateUrl": "https://www.paypal.me/DominoDesigns",
   "changelogUrl": "",
@@ -16,7 +16,7 @@
     {
       "slug": "ReTunes-ForFour",
       "name": "For Four",
-      "description": "Clock beat divider, counters and patterns for four beats per bar",
+      "description": "Clock splitter, counters and patterns for four beats per bar",
       "tags": [
         "Clock"
       ]
