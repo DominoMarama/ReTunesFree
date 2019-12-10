@@ -13,6 +13,11 @@ struct ReTunes_ForFour : Module {
     enum InputIds {
         CLOCK_INPUT,
         RESET_INPUT,
+        PATTERN_A_INPUT,
+        PATTERN_B_INPUT,
+        COUNT_X_INPUT,
+        COUNT_Y_INPUT,
+        COUNT_Z_INPUT,
         NUM_INPUTS
     };
     enum OutputIds {
@@ -62,7 +67,7 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
         if (counter == 256) counter = 0;
 
         countdownX--;
-        cd = (int)params[COUNT_X_PARAM].value;
+        cd = (int)inputs[COUNT_X_INPUT].isConnected() ? 1 + inputs[COUNT_X_INPUT].value * 25.5 : params[COUNT_X_PARAM].value;
         if (countdownX > cd)
         {
             countdownX = countdownX % cd;
@@ -72,7 +77,7 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
         };
 
         countdownY--;
-        cd = (int)params[COUNT_Y_PARAM].value;
+        cd = (int)inputs[COUNT_Y_INPUT].isConnected() ? 1 + inputs[COUNT_Y_INPUT].value * 25.5 : params[COUNT_Y_PARAM].value;
         if (countdownY > cd)
         {
             countdownY = countdownY % cd;
@@ -82,7 +87,7 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
         };
 
         countdownZ--;
-        cd = (int)params[COUNT_Z_PARAM].value;
+        cd = (int)inputs[COUNT_Z_INPUT].isConnected() ? 1 + inputs[COUNT_Z_INPUT].value * 25.5 : params[COUNT_Z_PARAM].value;
         if (countdownZ > cd)
         {
             countdownZ = countdownZ % cd;
@@ -104,8 +109,8 @@ void ReTunes_ForFour::process(const ProcessArgs &args) {
         outputs[i].value = (beat == i ? inputs[CLOCK_INPUT].value : 0.0f);
     }
 
-    patternA = (int)params[PATTERN_A_PARAM].value;
-    patternB = (int)params[PATTERN_B_PARAM].value;
+    patternA = (int)inputs[PATTERN_A_INPUT].isConnected() ? inputs[PATTERN_A_INPUT].value * 25.5 : params[PATTERN_A_PARAM].value;
+    patternB = (int)inputs[PATTERN_B_INPUT].isConnected() ? inputs[PATTERN_B_INPUT].value * 25.5 : params[PATTERN_B_PARAM].value;
 
     outputs[PATTERN_A_OUTPUT].value = ((counter & patternA) == patternA ? 10.0f : 0.0f);
     outputs[PATTERN_B_OUTPUT].value = ((counter & patternB) == patternB ? 10.0f : 0.0f);
@@ -130,7 +135,7 @@ struct ReTunes_ForFourWidget : ModuleWidget {
             auto w = createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(8, 65.291)), module, ReTunes_ForFour::PATTERN_A_PARAM);
             dynamic_cast<Knob*>(w)->snap = true;
             addParam(w);
-        };
+        }
         {
             auto w = createParamCentered<RoundSmallBlackKnob>(mm2px(Vec(8, 77.363)), module, ReTunes_ForFour::PATTERN_B_PARAM);
             dynamic_cast<Knob*>(w)->snap = true;
@@ -155,6 +160,11 @@ struct ReTunes_ForFourWidget : ModuleWidget {
 
         addInput(createInputCentered<PJ301MPort>(mm2px(Vec(7.544, 22.292)), module, ReTunes_ForFour::CLOCK_INPUT));
         addInput(createInputCentered<PJ301MPort>(mm2px(Vec(7.544, 40.087)), module, ReTunes_ForFour::RESET_INPUT));
+        addInput(createInputCentered<OptionalInput>(mm2px(Vec(8, 65.291)), module, ReTunes_ForFour::PATTERN_A_INPUT));
+        addInput(createInputCentered<OptionalInput>(mm2px(Vec(8, 77.363)), module, ReTunes_ForFour::PATTERN_B_INPUT));
+        addInput(createInputCentered<OptionalInput>(mm2px(Vec(8, 89.435)), module, ReTunes_ForFour::COUNT_X_INPUT));
+        addInput(createInputCentered<OptionalInput>(mm2px(Vec(8, 101.507)), module, ReTunes_ForFour::COUNT_Y_INPUT));
+        addInput(createInputCentered<OptionalInput>(mm2px(Vec(8, 113.58)), module, ReTunes_ForFour::COUNT_Z_INPUT));
 
         addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 17.0)), module, ReTunes_ForFour::BEAT_1_OUTPUT));
         addOutput(createOutputCentered<PJ301MPort>(mm2px(Vec(22.936, 29.073)), module, ReTunes_ForFour::BEAT_2_OUTPUT));
