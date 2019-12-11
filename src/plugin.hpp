@@ -16,7 +16,7 @@ struct OptionalInput : app::SvgPort {
                 setSvg(APP->window->loadSvg(asset::system("res/ComponentLibrary/PJ301M.svg")));
         }
 
-        void step() {
+        void step() override {
                 if (!module)
                         return;
 
