@@ -17,20 +17,22 @@ struct OptionalInput : app::SvgPort {
         }
 
         void step() {
-            if (!module)
-                    return;
+                if (!module)
+                        return;
 
-            CableWidget* cw = APP->scene->rack->incompleteCable;
-            if (cw) {
-                    if (cw->outputPort)
+                if (module->inputs[portId].isConnected()){
                         Widget::show();
-                    else
-                        Widget::hide();
-            } else if (module->inputs[portId].isConnected()){
-                Widget::show();
-            } else {
-                Widget::hide();
-            }
-            Widget::step();
+                } else {
+                        CableWidget* cw = APP->scene->rack->incompleteCable;
+                        if (cw) {
+                                if (cw->outputPort)
+                                        Widget::show();
+                                else
+                                        Widget::hide();
+                        } else  {
+                                Widget::hide();
+                        }
+                }
+                Widget::step();
         }
 };

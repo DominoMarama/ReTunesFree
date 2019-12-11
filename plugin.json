@@ -11,7 +11,7 @@
   "manualUrl": "https://github.com/DominoMarama/ReTunesFree/wiki/For-Four",
   "sourceUrl": "https://github.com/DominoMarama/ReTunesFree",
   "donateUrl": "https://www.paypal.me/DominoDesigns",
-  "changelogUrl": "",
+  "changelogUrl": "https://raw.githubusercontent.com/DominoMarama/ReTunesFree/master/CHANGELOG.md",
   "modules": [
     {
       "slug": "ReTunes-ForFour",
